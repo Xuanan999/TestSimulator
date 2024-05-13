@@ -7,7 +7,7 @@ _G.AuToBulon = true
 
 ---//Function
 function autoBulon()
-while _G.AuToBulon == true do
+while _G.AuToBulon and task.wait() do
 local args = {
     [1] = "Bully",
     [2] = workspace:WaitForChild("GameObjects"):WaitForChild("ArmWrestling"):WaitForChild("1"):WaitForChild("NPC"):WaitForChild("Bully"):WaitForChild("Table"),
@@ -16,9 +16,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer(unpack(args))
 
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onClickRequest"):FireServer()
-  end
- end
-
+end
 
 
 local Tab = Window:MakeTab({
