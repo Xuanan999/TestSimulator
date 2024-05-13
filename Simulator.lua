@@ -6,7 +6,6 @@ local Window = OrionLib:MakeWindow({Name = "AnDepZai Hub", HidePremium = false, 
 _G.AuToBulon = true
 
 ---//Function
-function autoBulon()
 while _G.AuToBulon and task.wait() do
 local args = {
     [1] = "Bully",
@@ -30,6 +29,5 @@ Tab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 	_G.AuToBulon = Value
-	autoBulon()
 	end    
 })
