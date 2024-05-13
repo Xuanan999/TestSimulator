@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-ocal Window = OrionLib:MakeWindow({Name = "AnDepZai Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "AnDepZai"})
+local Window = OrionLib:MakeWindow({Name = "AnDepZai Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "AnDepZai"})
 
 local Tab = Window:MakeTab({
 	Name = "Main Farm",
