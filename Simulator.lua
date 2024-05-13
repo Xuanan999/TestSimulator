@@ -2,10 +2,6 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 ocal Window = OrionLib:MakeWindow({Name = "AnDepZai Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "AnDepZai"})
 
- --//Values
-_G.autoTap = true
-
-  --//tab
 local Tab = Window:MakeTab({
 	Name = "Main Farm",
 	Icon = "rbxassetid://4483345998",
@@ -13,16 +9,21 @@ local Tab = Window:MakeTab({
 })
   --//Tab Main Farm
 Tab:AddToggle({
-	Name = "Auto Tap (Click)",
+	Name = "Auto Bully",
 	Default = false,
 	Callback = function(Value)
-	_G.autoTap = Value
-	autoTap()	
+	_G.AuToBulon = Value
 	end    
 })
-function autoTap()    
-    while _G.autoTap == true do
-        game:GetService("ReplicatedStorage").Remotes.Tap:FireServer()
-        wait(0.000000000000000000000000000000000000000000000000000000001)
-    end
+
+while _G.AuToBulon task.wait() do
+local args = {
+    [1] = "Bully",
+    [2] = workspace:WaitForChild("GameObjects"):WaitForChild("ArmWrestling"):WaitForChild("1"):WaitForChild("NPC"):WaitForChild("Bully"):WaitForChild("Table"),
+    [3] = "1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer(unpack(args))
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onClickRequest"):FireServer()
 end
