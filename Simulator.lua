@@ -1,17 +1,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-ocal Window = OrionLib:MakeWindow({Name = "AnDepZai Hub | Simulator", HidePremium = false, SaveConfig = true, ConfigFolder = "AnDepZai"})
+ocal Window = OrionLib:MakeWindow({Name = "AnDepZai Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "AnDepZai"})
 
- --//Soucre Values
-_G.autotap = true
-
- --//Soucre Function
-function autotap()    
-    while _G.autotap == true do
-        game:GetService("ReplicatedStorage").Remotes.Tap:FireServer()
-        wait(0.000000000000000000000000000000000000000000000000000000001)
-    end
-end
 
   --//tab
 local Tab = Window:MakeTab({
@@ -28,3 +18,9 @@ Tab:AddToggle({
 	autotap()	
 	end    
 })
+function autotap()    
+    while _G.autotap == true do
+        game:GetService("ReplicatedStorage").Remotes.Tap:FireServer()
+        wait(0.000000000000000000000000000000000000000000000000000000001)
+    end
+end
