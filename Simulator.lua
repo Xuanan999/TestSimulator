@@ -16,7 +16,7 @@ Tab:AddToggle({
 	end    
 })
 
-while _G.AuToBulon task.wait() do
+while _G.AuToBulon and task.wait() do
 local args = {
     [1] = "Bully",
     [2] = workspace:WaitForChild("GameObjects"):WaitForChild("ArmWrestling"):WaitForChild("1"):WaitForChild("NPC"):WaitForChild("Bully"):WaitForChild("Table"),
